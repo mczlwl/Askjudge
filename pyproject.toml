@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "askjudge"
+version = "0.1.0"
+description = "Selective human assistance for LLM-as-a-Judge workflows."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [
+    { name = "AskJudge contributors" },
+]
+keywords = [
+    "llm",
+    "llm-as-a-judge",
+    "human-in-the-loop",
+    "evaluation",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = []
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0",
+]
+openai = [
+    "openai>=1.0",
+]
+deepseek = [
+    "openai>=1.0",
+]
+
+[project.scripts]
+askjudge = "askjudge.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["askjudge*"]
+exclude = ["examples*", "tests*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q --basetemp=.pytest-tmp"
+
+
