@@ -203,6 +203,24 @@ model round.
 - Interactive CLI answers are collected after the initial batch completes.
 - User judge output is returned as a string; AskJudge does not parse its schema.
 
+## Routing benchmark
+
+The source checkout now includes a 72-case synthetic benchmark for deciding
+when to request human assistance: 30 missing/resolved context pairs plus 12 hard
+negative controls. Reference labels and counterfactual human answers are kept
+separate from model input. These are provisional author labels, not an
+independently human-validated benchmark.
+
+```console
+python -m benchmarks.routing validate
+python -m benchmarks.routing baselines --split all --out-dir work/routing-baselines
+```
+
+See [the benchmark guide](benchmarks/routing/README.md) for real-model runs,
+dev/test splits, failure-aware metrics, and blind annotation/question review.
+The existing 20-case example remains a workflow demonstration; it is not the
+independent routing benchmark.
+
 ## Development
 
 ```console
@@ -217,4 +235,5 @@ walkthrough.
 ## License
 
 MIT. See [LICENSE](LICENSE).
+
 
