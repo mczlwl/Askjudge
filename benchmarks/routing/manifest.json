@@ -1,0 +1,15 @@
+{
+  "version": "0.1.0",
+  "source": "synthetic_authored",
+  "independent_human_review": false,
+  "description": "30 counterfactual pairs plus 12 hard negatives; provisional author labels.",
+  "cases": 72,
+  "pairs": 30,
+  "controls": 12,
+  "files": {
+    "cases.jsonl": "ee970924dc6125f18bef6e16c797e57250e64784f5a8b4b3fcbfee4c4edf04f2",
+    "gold.jsonl": "ac97427af66e3d6a34ad66fe012ec2292ab671a2c5a8546a07e418fc752af239",
+    "splits.json": "40731751c19a80b66484edb0ee3709016f201d63040994dd156bde3b4d545372",
+    "judge_prompt.md": "5158f9ac38576ca95a7439e73e06d7b8cccc9b988b7e642c972f265bf2e32a37"
+  }
+}
