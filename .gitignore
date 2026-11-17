@@ -10,6 +10,6 @@ dist/
 examples/results_*.jsonl
 .release-dist/
 .release-install/
-
+/work/
 
 
